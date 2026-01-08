@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QUISSUMUA CARDOSO SOLUÇÕES TECNOLÓGICAS LTDA - Transformando ideias em soluções digitais. Desenvolvimento Web, Mobile e Consultoria Tech.">
+    <meta name="keywords" content="desenvolvimento web, desenvolvimento mobile, consultoria tecnológica, soluções digitais">
+    <meta name="author" content="QUISO LAB">
+    <title>QUISO LAB - Soluções Tecnológicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">QUISO LAB</div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h1>QUISSUMUA CARDOSO SOLUÇÕES TECNOLÓGICAS</h1>
+                <p class="subtitle">Transformando ideias em soluções digitais</p>
+                <a href="#contato" class="cta-button">Entre em Contato</a>
+            </div>
+        </section>
+
+        <section id="sobre" class="about">
+            <div class="container">
+                <h2>Sobre Nós</h2>
+                <div class="about-content">
+                    <p>A <strong>QUISO LAB</strong> (QUISSUMUA CARDOSO SOLUÇÕES TECNOLÓGICAS LTDA) é uma empresa dedicada ao desenvolvimento de soluções tecnológicas inovadoras e eficientes.</p>
+                    <p>Nossa missão é transformar ideias em produtos digitais de alto impacto, combinando expertise técnica com uma compreensão profunda das necessidades dos nossos clientes.</p>
+                    <div class="values">
+                        <div class="value-item">
+                            <h3>Missão</h3>
+                            <p>Desenvolver soluções tecnológicas que impulsionem o sucesso dos nossos clientes.</p>
+                        </div>
+                        <div class="value-item">
+                            <h3>Valores</h3>
+                            <p>Inovação, qualidade, comprometimento e excelência em cada projeto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="services">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🌐</div>
+                        <h3>Desenvolvimento Web</h3>
+                        <p>Criação de websites e aplicações web modernas, responsivas e otimizadas para todos os dispositivos.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">📱</div>
+                        <h3>Desenvolvimento Mobile</h3>
+                        <p>Desenvolvimento de aplicativos móveis nativos e multiplataforma para iOS e Android.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">💡</div>
+                        <h3>Consultoria Tech</h3>
+                        <p>Consultoria especializada em tecnologia para otimizar processos e implementar as melhores soluções.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact">
+            <div class="container">
+                <h2>Contato</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <a href="mailto:contato@quisolab.com">contato@quisolab.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Razão Social:</strong>
+                            <p>QUISSUMUA CARDOSO SOLUÇÕES TECNOLÓGICAS LTDA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 QUISO LAB. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
